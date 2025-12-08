@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS notes (
 
 
 INSERT INTO users (firstname, lastname, email, password, role) 
-SELECT 'Johnathan', 'Donut', 'admin@project2.com', '$2y$10$ueGdTsEm2JY2oWQ4fQfH2eYSEVti5Gp4DLgok91nJCZvLw35uF8lO', 'Admin'
+SELECT 'John', 'Doe', 'admin@project2.com', '$2y$10$ueGdTsEm2JY2oWQ4fQfH2eYSEVti5Gp4DLgok91nJCZvLw35uF8lO', 'Admin'
 WHERE NOT EXISTS (
     SELECT 1 
     FROM users

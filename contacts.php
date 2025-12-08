@@ -143,7 +143,7 @@ try {
                     <form method="GET" class="search-box">
                         <input type="text" 
                                name="search" 
-                               placeholder="Search contacts..." 
+                               placeholder="Search contacts" 
                                value="<?php echo htmlspecialchars($search); ?>"
                                class="search-input">
                         <button type="submit" class="btn btn-primary">
@@ -215,8 +215,7 @@ try {
                     <?php else: ?>
                     <div class="empty-state">
                         <i class="fas fa-users"></i>
-                        <h3 class="text-xl font-semibold mb-2">No contacts found</h3>
-                        <p class="mb-4"><?php echo !empty($search) ? 'Try a different search term' : 'Get started by adding your first contact'; ?></p>
+                        <p class="mb-4"><?php echo !empty($search) ? 'Try a different search term' : 'No contacts found'; ?></p>
                         <a href="new-contact.php" class="btn btn-primary">
                             <i class="fas fa-plus"></i> Add New Contact
                         </a>
