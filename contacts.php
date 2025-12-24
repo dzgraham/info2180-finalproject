@@ -214,7 +214,6 @@ try {
                     </div>
                     <?php else: ?>
                     <div class="empty-state">
-                        <i class="fas fa-users"></i>
                         <p class="mb-4"><?php echo !empty($search) ? 'Try a different search term' : 'No contacts found'; ?></p>
                         <a href="new-contact.php" class="btn btn-primary">
                             <i class="fas fa-plus"></i> Add New Contact
