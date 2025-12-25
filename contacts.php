@@ -103,12 +103,6 @@ try {
                             <span>Users</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="new_user.php" class="nav-link">
-                            <i class="fas fa-user-plus"></i>
-                            <span>Add User</span>
-                        </a>
-                    </li>
                     <?php endif; ?>
                     <li class="nav-item">
                         <a href="logout.php" class="nav-link">
