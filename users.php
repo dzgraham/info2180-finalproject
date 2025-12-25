@@ -185,7 +185,7 @@ try {
             <div class="page-header">
                 <h1 class="page-title">Users</h1>
                 <div class="header-actions">
-                    <a href="new-user.php" class="btn btn-primary">
+                    <a href="new_user.php" class="btn btn-primary">
                         <i class="fas fa-user-plus"></i> New User
                     </a>
                 </div>
@@ -238,7 +238,7 @@ try {
                     <div class="empty-state">
                         <i class="fas fa-users"></i>
                         <h3 class="text-xl font-semibold mb-2">No users found</h3>
-                        <a href="new-user.php" class="btn btn-primary">
+                        <a href="new_user.php" class="btn btn-primary">
                             <i class="fas fa-user-plus"></i> Add New User
                         </a>
                     </div>
