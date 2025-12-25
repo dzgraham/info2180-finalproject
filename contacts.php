@@ -105,7 +105,7 @@ try {
                     </li>
                     <?php endif; ?>
                     <li class="nav-item">
-                        <a href="logout.php" class="nav-link">
+                        <a href="logout.php" class="nav-link btn-danger">
                             <i class="fas fa-sign-out-alt"></i>
                             <span>Logout</span>
                         </a>

@@ -134,8 +134,8 @@ try {
     <nav class="main-header">
         <div class="header-content">
             <div class="logo">
-                <i class="fas fa-water"></i>
-                <span>Dolphin CRM</span>
+                    <i class="fas fa-water"></i>
+                    <span>Dolphin CRM</span>
             </div>
             <div class="user-menu">
                 <div class="user-info">
@@ -172,7 +172,7 @@ try {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="logout.php" class="nav-link">
+                        <a href="logout.php" class="nav-link btn-danger">
                             <i class="fas fa-sign-out-alt"></i>
                             <span>Logout</span>
                         </a>
