@@ -371,3 +371,14 @@ body {
     flex-direction: column;
   }
 }
+
+#feedback {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+#feedback.error {
+  color: red;
+  font-weight: bold;
+}
