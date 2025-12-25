@@ -415,7 +415,7 @@ try {
                     </li>
                     <?php endif; ?>
                     <li class="nav-item">
-                        <a href="logout.php" class="nav-link btn-danger">
+                        <a href="logout.php" class="nav-link">
                             <i class="fas fa-sign-out-alt"></i>
                             <span>Logout</span>
                         </a>
@@ -466,7 +466,7 @@ try {
                                     by <?php echo htmlspecialchars($contact['created_by_name'] ?? 'System'); ?>
                                 </span>
                                 <span class="ml-4">
-                                    Last updated: <?php echo date('F j, Y, g:i a', strtotime($contact['updated_at'])); ?>
+                                 Last updated: <?php echo date('F j, Y, g:i a', strtotime($contact['updated_at'])); ?>
                                 </span>
                             </div>
                         </div>
@@ -504,8 +504,7 @@ try {
                             <label><i class="fas fa-phone mr-2"></i> Telephone</label>
                             <span>
                                 <?php if ($contact['telephone']): ?>
-                                <a href="tel:<?php echo htmlspecialchars($contact['telephone']); ?>" 
-                                   class="text-blue-600 hover:text-blue-800 hover:underline">
+                                <a href="tel:<?php echo htmlspecialchars($contact['telephone']); ?>" >
                                     <?php echo htmlspecialchars($contact['telephone']); ?>
                                 </a>
                                 <?php else: ?>
@@ -522,9 +521,8 @@ try {
                         <div class="info-item">
                             <label>Contact Type</label>
                             <span>
-                                <span class="badge <?php echo $contact['type'] === 'Sales Lead' ? 'badge-success' : 'badge-primary'; ?>">
-                                    <?php echo htmlspecialchars($contact['type']); ?>
-                                </span>
+                                    
+                                <?php echo htmlspecialchars($contact['type']); ?>
                             </span>
                         </div>
                         <div class="info-item">
@@ -560,7 +558,6 @@ try {
                     <h3 class="card-title">
                         Contact Notes
                     </h3>
-                    <span class="text-muted"><?php echo count($notes); ?> note<?php echo count($notes) !== 1 ? 's' : ''; ?></span>
                 </div>
                 <div class="card-body">
                     <div class="add-note-form">
@@ -569,7 +566,7 @@ try {
                             <div class="form-group">
                                 <label class="form-label">
                                     <i class="fas fa-plus-circle mr-2"></i>
-                                    Add a note about <?php echo htmlspecialchars($contact['firstname']); ?>
+                                    Add a note
                                 </label>
                                 <textarea name="comment" 
                                           class="form-control" 
@@ -631,17 +628,14 @@ try {
             this.style.height = (this.scrollHeight) + 'px';
         });
 
-        // Initialize textarea height
         textarea.dispatchEvent(new Event('input'));
 
-        // Add some interactivity to the notes
         document.querySelectorAll('.note-item').forEach(note => {
             note.addEventListener('click', function() {
                 this.classList.toggle('bg-blue-50');
             });
         });
 
-        // Confirm before switching contact type
         document.querySelector('button[value="switch_type"]').addEventListener('click', function(e) {
             const currentType = "<?php echo $contact['type']; ?>";
             const newType = currentType === 'Sales Lead' ? 'Support' : 'Sales Lead';
@@ -651,7 +645,6 @@ try {
             }
         });
 
-        // Highlight assigned button if it's already assigned to current user
         const assignButton = document.querySelector('button[value="assign_to_me"]');
         if (assignButton.disabled) {
             assignButton.classList.add('bg-green-600', 'hover:bg-green-700');

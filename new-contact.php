@@ -363,10 +363,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                         </div>
 
-                        <h4 class="section-title"><i class="fas fa-plus-circle"></i> Additional Information</h4>
                         <div class="form-row">
                             <div class="form-group">
-                                <label class="form-label"><i class="fas fa-sticky-note"></i> Initial Comment</label>
+                                <label class="form-label"><i class="fas fa-plus-circle"></i> Additional Information</label>
                                 <textarea name="initial_comment" 
                                           class="form-control" 
                                           rows="3" 
