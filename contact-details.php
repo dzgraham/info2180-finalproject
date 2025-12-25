@@ -415,7 +415,7 @@ try {
                     </li>
                     <?php endif; ?>
                     <li class="nav-item">
-                        <a href="logout.php" class="nav-link">
+                        <a href="logout.php" class="nav-link btn-danger">
                             <i class="fas fa-sign-out-alt"></i>
                             <span>Logout</span>
                         </a>
@@ -462,12 +462,10 @@ try {
                             </h2>
                             <div class="contact-meta">
                                 <span>
-                                    <i class="fas fa-calendar-plus mr-1"></i>
-                                    Created on <?php echo date('F j, Y', strtotime($contact['created_at'])); ?> 
+                                    Created on: <?php echo date('F j, Y', strtotime($contact['created_at'])); ?> 
                                     by <?php echo htmlspecialchars($contact['created_by_name'] ?? 'System'); ?>
                                 </span>
                                 <span class="ml-4">
-                                    <i class="fas fa-sync-alt mr-1"></i>
                                     Last updated: <?php echo date('F j, Y, g:i a', strtotime($contact['updated_at'])); ?>
                                 </span>
                             </div>
